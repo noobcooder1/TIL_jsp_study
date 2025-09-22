@@ -10,12 +10,9 @@
  <html>
  <head>
         <meta charset="UTF-8">
-    </head>
+     <title>hi</title>
+ </head>
  <body>
-
- <%
-         request.setCharacterEncoding("utf-8");
-     %>
      아이디 :   <%=request.getParameter("id"    )%><br>
      비밀번호 : <%=request.getParameter("pw"    )%><br>
      성별 :     <%=request.getParameter("gender")%><br>
