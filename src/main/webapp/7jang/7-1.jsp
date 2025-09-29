@@ -15,7 +15,7 @@
      </head>
  <body>
 
- <form action="7-2.jsp" method="post" enctype="multipart/form-data">
+ <form action="7-3.jsp" method="post" enctype="multipart/form-data">
     업로드할 파일을 선택하세요.<br>
     <input type="file" name="upload"><br>
     <input type="submit" value="업로드">
