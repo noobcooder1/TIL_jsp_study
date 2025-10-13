@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
+<!--變幻自在-->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <style>
         table     { width:680px; text-align:center; }
-        th        { background-color:cyan; }
+        th        { background-color:purple; }
         
         .num      { width: 80px; }
         .title    { width:230px; }
