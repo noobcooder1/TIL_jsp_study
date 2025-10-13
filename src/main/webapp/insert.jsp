@@ -6,11 +6,26 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>insert</title>
-</head>
-<body>
+<%@ page import = "java.sql.*" %>
+<%@ page import = "java.time.*" %>
 
-</body>
-</html>
+<%
+    String writer = request.getParameter("writer");
+    String title = request.getParameter("title");
+    String content = request.getParameter("content");
+
+    Class.forName("org.mariadb.jdbc.Driver");
+    try (
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/jspdb", "jsp", "1234");
+            Statement stmt = conn.createStatement();
+    ) {
+        String curTime = LocalDate.now() + " " + LocalTime.now().toString().substring(0, 8);
+
+
+        stmt.executeUpdate(String.format("insert into board (writer, title, content, regtime, hits) values ('%s', '%s', '%s', '%s', 0)",
+                writer, title, content, curTime));
+    } catch(Exception e) {
+        out.println(e.getMessage());
+    }
+    response.sendRedirect("list.jsp");
+%>
