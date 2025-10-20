@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <style>
         table     { width:680px; text-align:center; }
-        th        { background-color:purple; }
+        th        { background-color:cyan; }
         
-        .num      { width: 80px; }
+        .num      { width: 90px; }
         .title    { width:230px; }
         .writer   { width:100px; }
         .regtime  { width:180px; }
                 
-        a:link    { text-decoration:none; color:blue; }
+        a:link    { text-decoration:none; color:purple; }
         a:visited { text-decoration:none; color:gray; }
         a:hover   { text-decoration:none; color:red;  }
     </style>
